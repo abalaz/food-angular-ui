@@ -40,14 +40,14 @@
   background-color: aqua;
 }
 .btn{
-  width: 90px;
-  height: 35px;
-  background-color: #ec6083;
+  width: 80%;
+  height: 39Px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   border: none;
   border-radius: 15px;
+  padding: 0px;
 }
 .img {
   display: flex;
@@ -57,4 +57,136 @@
   font-family: 'Roboto', sans-serif;
   font-size: medium;
   font-weight: 700;
+}
+.icon {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  color: #798a9fcf;
+  background-color: #fff;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Roboto', sans-serif ;
+  border-radius: 15px;
+}
+.inf-btn {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  background: none;
+  border: none;
+  color: #798a9fcf;
+  display: flex;
+  font-family: 'Roboto', sans-serif;
+  font-size: medium;
+  justify-content: space-between;
+}
+
+.inf-btn:focus {
+  background-color: #f87193;
+  color: white;
+  outline: none;
+  border: none;
+}
+
+.inf-btn:focus span{
+  background-color: #ec6083;
+  color: #fff;
+}
+
+span.fas, .fa {
+  width: 30%;
+    height: 100%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+}
+p.p-text {
+  width: 70%;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+}
+
+.header-content {
+  width: 100%;
+  background-color: aquamarine;
+  height: 20%;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+.bottomc-content {
+  width: 100%;
+  height: 80%;
+  background-color: darkgray;
+  border-radius: 15px;
+}
+
+.name-header {
+  width: 29%;
+  height: 100%;
+  background-color: azure;
+}
+.research-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 38%;
+  background-color: aqua;
+  height: 100%;
+  margin: 0px 0px 0px -77px;
+}
+.fa.fa-search {
+  width: 13%;
+  height: 27%;
+  border: none;
+  margin-left: 30px;
+}
+.txt-search{
+  display: none;
+  width: 60%;
+  height: 25%;
+}
+.store {
+  background: aqua;
+  width: 15%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.fa.fa-shopping-cart {
+  width: 30%;
+  height: 30%;
+  border: none;
+  background-color: black;
+  color: #fff;
+}
+.name{
+  font-size: 31px;
+  font-family: 'Roboto', sans-serif;
+  padding: 40px;
+}
+
+input {
+  width: 100px;
+  height: 50px;
+}
+
+button.fa-search:focus .txt-search{
+  display: block;
+  outline: none;
+  border: none;
+}
+
+.txt-search:focus{
+  outline: none;
+  border: none;
 }
