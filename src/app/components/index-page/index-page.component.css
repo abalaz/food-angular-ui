@@ -27,7 +27,7 @@
 .content{
   width: 80%;
     height: 90%;
-  background-color: #fff;
+  background: #fff;
   border-radius: 15px;
 }
 .img_acc{
@@ -35,9 +35,13 @@
   border: 4px solid white;
 }
 .bottom_navbar{
-  width: 94px;
-  height: 110px;
-  background-color: aqua;
+  width: 124px;
+  height: 166px;
+
+}
+.img-bottom_navbar {
+  width: 108px;
+  height: 165px;
 }
 .btn{
   width: 80%;
@@ -137,41 +141,53 @@ span.fas, .fa {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  width: 38%;
-  height: 100%;
+  width: 39%;
+  height: 30%;
   margin: 0px 0px 0px -115px;
 }
-button.search {
-  width: 100%;
-    height: 32%;
-    border: none;
-    display: flex;
-    margin-left: 30px;
-    background-color: #fff;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    align-items: center;
-    border: none;
-}
-
-button.search:focus .txt-search {
-  background-color: red;
-  display: block !important;
+.search {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  margin-left: 10px;
+  background-color: #fff;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
   border: none;
 }
 
+.fa-search{
+  width: 100%;
+}
+.txt-search.show {
+  width: 80%;
+  border: 1px solid gray;
+  height: 100%;
+  border-radius: 5px;
+}
+.txt-search:focus{
+  border: 1px solid gray;
+  outline: none;
+}
 ::before {
   padding: 10%;
 }
-
-
-
-.txt-search{
-  width: 85%;
-  height: 55%;
-  display: none;
-  background-color: blue;
+.hidden {
+  visibility: hidden;
 }
+
+.show {
+  visibility: visible;
+}
+
+
+.txt-searc{
+    width: 100%;
+    height: 85%;
+    /* background-color: blue; */
+}
+
 .store {
 
   width: 15%;
@@ -181,11 +197,12 @@ button.search:focus .txt-search {
   justify-content: center;
 }
 .fa.fa-shopping-cart {
-  width: 30%;
+  width: 38%;
   height: 30%;
   border: none;
   background-color: black;
   color: #fff;
+
 }
 
 input {
@@ -193,13 +210,13 @@ input {
   height: 50px;
 }
 
-.fa-search:focus .txt-search{
+.fa-search:focus{
   display: block;
   outline: none;
   border: none;
 }
 
-.txt-search:focus{
+.search:focus{
   outline: none;
   border: none;
 }
@@ -215,11 +232,13 @@ input {
   width: 70%;
   height: 100%;
   background-color: #fff;
+  border-radius: 0px 0px 0px 15px;
 }
 .content-right {
   width: 30%;
   height: 100%;
   background-color: #fff;
+  border-radius: 0px 0px 15px 0px;
 }
 .lists-menu {
   width: 100%;
@@ -235,10 +254,15 @@ input {
   height: 100%;
   border-radius: 29px;
   display: flex;
-  align-items: flex-end;
-  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
+  font-size: small;
+  flex-direction: column;
+}
+.list-name:hover {
+  background-color: #fafafaed ;
 }
 .all-items {
   width: 100%;
@@ -262,11 +286,9 @@ input {
   margin-right: 30px;
 }
 .text-all-item {
-  display: flex;
   font-weight: 900;
   font-size: 22px;
-  justify-content: center;
-  align-items: center;
+  margin-top: 12px;
 }
 .name {
   font-size: 31px;
@@ -282,6 +304,7 @@ input {
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 12px;
 }
 
 .fa.fa-angle-right {
@@ -315,7 +338,17 @@ input {
   transform: translate(20px, -76px);
 }
 .money {
-  transform: translate(13px, -85px);
+  transform: translate(21px, -93px);
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 76%;
+  padding: -1px;
+  font-size: smaller;
+}
+.test-money {
+  font-size: 17px;
+  font-weight: 700;
 }
 .saler {
   width: 80%;
@@ -360,10 +393,17 @@ h6.sale-of {
 }
 .list-comment {
   display: flex;
+  background-color: #80808047;
   margin: 10px 0px 5px 10px;
+  border-radius: 10px;
 }
 .img-comment {
   width: 80px;
   height: 60px;
   border-radius: 20px;
+}
+
+.img-list-name{
+  width: 50px;
+  height: 50px;
 }
