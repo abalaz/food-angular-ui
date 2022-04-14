@@ -1,89 +1,14 @@
-<div class="wrapper">
-  <div class="container">
-    <div class="navbar-menu">
-      <div class="img"><img class="img_acc" src="../../../assets/pictur.png" alt="" width="50px" height="50px">
-      <h3>Jack Gibbs</h3>
-      </div>
-      <div class="btn bnt-home">
-        <button class="inf-btn" >
-          <span class="fas fa-home"></span>
-          <p class="p-text">Home</p>
-        </button>
-      </div>
-      <div class="btn bnt-menu">
-        <button class="inf-btn" (click)="menu()">
-          <span class="fas fa-book"></span>
-          <p class="p-text">Menu</p>
-        </button>
-      </div>
-      <div class="btn bnt-aricles">
-        <button class=" inf-btn">
-          <span class="fas fa-file"></span>
-         <p class="p-text">Aricles</p>
-        </button>
-      </div>
-      <div class="btn bnt-setting">
-        <button class="inf-btn">
-          <span class="fa fa-gear"></span>
-          <p class="p-text">Setting</p>
-        </button>
-      </div>
-      <div class="bottom_navbar">
-        <img class="img-bottom_navbar" src="../../../assets/faster-removebg-preview.png" alt="">
-      </div>
-    </div>
-    <div class="content">
-      <div class="header-content">
-        <div class="name-header"><h2 class="name">Welcome to Eatland</h2></div>
-        <div class="research-header">
-          <input [ngClass]="isSearch ? 'show' : 'hidden'" type="text" class="txt-search">
-          <button class="search" (click)="search()">
-            <span class="fa fa-search"></span>
-          </button>
 
-        </div>
-        <div class="store"><button class="fa fa-shopping-cart"></button></div>
-      </div>
-      <div class="bottomc-content">
-        <div class="content-left">
-          <div class="lists-menu">
-            <div class="list-name">
-              <img class="img-list-name" src="../../../assets/download-removebg-preview.png" alt="">
-              <p>All</p>
-            </div>
-            <div class="list-name">
-              <img class="img-list-name" src="../../../assets/download-removebg-preview.png" alt="">
-              <p>Bugers</p>
-            </div>
-            <div class="list-name">
-              <img class="img-list-name" src="../../../assets/download-removebg-preview.png" alt="">
-              <p>Pizza</p>
-            </div>
-            <div class="list-name">
-              <img class="img-list-name" src="../../../assets/download-removebg-preview.png" alt="">
-              <p>Salads</p>
-            </div>
-            <div class="list-name">
-              <img class="img-list-name" src="../../../assets/download-removebg-preview.png" alt="">
-              <p>Deserts</p>
-            </div>
-            <div class="list-name">
-              <img class="img-list-name" src="../../../assets/download-removebg-preview.png" alt="">
-              <p>Drinks</p>
-            </div>
-          </div>
           <div class="all-items">
             <div class="all-items-left">
               <p class="text-all-item"> All items</p>
-            <span class="fa fa-sliders" ></span>
             </div>
             <div class="all-items-right">
               <p class="text-all-item-left">view all</p>
-            <span class="fa fa-angle-right"></span>
+            <span class="fa fa-angle-right"(change)="emitChangeValue($event)" (click)="navigate('menu')" ></span>
             </div>
           </div>
-          <router-outlet></router-outlet>
-          <div class="items" [ngClass]="isIndex ? 'show' : 'hidden'">
+          <div class="items" >
             <div class="items-food">
               <img class="picture" src="../../../assets/download-removebg-preview.png" alt="">
               <div class="name-item">burger</div>
@@ -151,46 +76,4 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="content-right">
-          <div class="saler">
-            <img class="img-sale" src="../../../assets/download-removebg-preview.png" alt="">
-            <h6 class="sale-of">-50% off</h6>
-            <p class="for-items">the full of burger</p>
-          </div>
-          <div class="articles">
-            <h1 class="srticles">Articles</h1>
-            <span class="fa fa-angle-right"></span>
-          </div>
-          <div class="comment">
-            <div class="list-comment">
-              <img class="img-comment" src="../../../assets/download-removebg-preview (1).png" alt="">
-              <div>
-                <p>content</p>
-              </div>
-            </div>
-            <div class="list-comment">
-              <img class="img-comment" src="../../../assets/download-removebg-preview (1).png" alt="">
-              <div>
-                <p>content</p>
-              </div>
-            </div>
-            <div class="list-comment">
-              <img class="img-comment" src="../../../assets/download-removebg-preview (1).png" alt="">
-              <div>
-                <p>content</p>
-              </div>
-            </div>
-            <div class="list-comment">
-              <img class="img-comment" src="../../../assets/download-removebg-preview (1).png" alt="">
-              <div>
-                <p>content</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
 
-    </div>
-  </div>
-</div>

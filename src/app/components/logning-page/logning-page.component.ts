@@ -34,11 +34,13 @@ export class LogningPageComponent implements OnInit {
       pass: "1234",
     },
   ]
+
   detailForm= new FormGroup({
     name: new FormControl(''),
     gmail: new FormControl(''),
     pass: new FormControl(''),
   });
+
 
   constructor(private router:Router){}
 
@@ -47,6 +49,7 @@ export class LogningPageComponent implements OnInit {
 
   login(){
     this.router.navigate(['home']) ;
+    localStorage.setItem('isLoginIn', 'true');
   }
 
 }

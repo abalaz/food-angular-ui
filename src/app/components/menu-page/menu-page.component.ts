@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-menu-page',
   templateUrl: './menu-page.component.html',
@@ -7,9 +7,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuPageComponent implements OnInit {
 
-  constructor() { }
+  isSearch=false;
+  isHome=false;
+  isMenu=false;
+
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
   }
 
+  search(){
+    this.isSearch=true;
+  }
+
+  menu(){
+    this.isMenu=true;
+    this.router.navigate(['menu']);
+  }
+
+  home(){
+    this.isHome=true;
+    this.router.navigate(['home'])
+  }
 }

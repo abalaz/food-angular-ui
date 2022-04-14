@@ -18,7 +18,8 @@ import { MenuPageComponent } from './components/menu-page/menu-page.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
