@@ -1,18 +1,21 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Output,EventEmitter } from '@angular/core';
+import { UserService } from './services/user.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  constructor(private router:Router){
-    console.log('check',this.router.url);
-  }
-
+  @Output() direction = new EventEmitter<string>();
   title = 'eatleand';
   isSearch=false;
-  isSelectedRoute = 'home';
+  isSelectedRoute = this.userService.isSelectedRoute;
+  childData: any;
+
+  constructor(private router:Router, public userService: UserService){
+  }
 
   ngOnInit(): void {
   }
@@ -25,9 +28,17 @@ export class AppComponent implements OnInit {
     this.isSearch=true;
   }
 
-  navigate(direction: string) {
-    this.isSelectedRoute = direction;
+  navigateUrl(direction: string) {
+    this.userService.navigate(direction);
     this.router.navigate([direction]);
   }
 
+  displayChildValue(event: any){
+    this.childData = event;
+  }
+
+  addNewItem(value: string) {
+    this.direction.emit(value);
+    console.log(value);
+  }
 }
