@@ -10,7 +10,7 @@
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  width: 35%;
+  width:28%;
 }
 .all-items-right {
   width: 22%;
@@ -32,7 +32,6 @@
   font-weight: 900;
 }
 .text-all-item-left {
-
   transform: translatey(10px);
   width: 78px;
   height: 46%;
@@ -47,22 +46,39 @@
   height: 30px;
 }
 .items {
-  width: 82%;
-  height: 62%;
+  width: 100%;
+  height: 71%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   flex-wrap: wrap;
-  transform: translate(57px, 35px);
+  box-sizing: border-box;
+  /* transform: translate(10px, -3px); */
   overflow-x: hidden;
   overflow-y: scroll;
 }
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgba(197, 197, 197, 0.727);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #a9a9a9;
+  border-radius: 10px;
+}
+
 .items-food {
-  width: 28%;
-  height: 35%;
-  margin-top: 42px;
+  width: 29%;
+  height: 33%;
+  margin-top: 18px;
   background-color: #f4f9ff;
-  transform: translateY(21px);
   border-radius: 32px;
+  margin-bottom: 32px;
+  transform: translateY(21px);
 }
 .picture{
   width: 100px;
@@ -88,60 +104,4 @@
   font-size: 17px;
   font-weight: 700;
 }
-.saler {
-  width: 80%;
-  height: 20%;
-  background-color: #9a82ef;
-  margin: 0px auto;
-  border-radius: 20px;
-}
-.img-sale {
-  height: 120px;
-  width: 100px;
-  transform: rotate(319deg) translate(122px, 40px);
-}
-h6.sale-of {
-  transform: translate(18px, -76px);
-  font-size: larger;
-  font-weight: 700;
-  color: #fff;
-}
-.for-items {
-  transform: translate(15px, -80px);
-  color: #fff;
-}
-.articles {
-  width: 100%;
-  height: 60px;
-  background-color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  padding: 0px 26px 0px 0px;
-}
-.srticles {
-  font-size: 22px;
-  margin-right: 45px;
-  color: #212529;
-  font-weight: 700;
-}
-.comment {
-  display: flex;
-  flex-direction: column;
-}
-.list-comment {
-  display: flex;
-  background-color: #80808047;
-  margin: 10px 0px 5px 10px;
-  border-radius: 10px;
-}
-.img-comment {
-  width: 80px;
-  height: 60px;
-  border-radius: 20px;
-}
 
-.img-list-name{
-  width: 50px;
-  height: 50px;
-}

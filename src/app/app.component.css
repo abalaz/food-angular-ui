@@ -6,6 +6,7 @@
   align-items: center;
   justify-content: center;
 }
+
 .container{
   width: 90vw;
   height: 85vh;
@@ -16,6 +17,7 @@
   align-items: center;
   border-radius: 20px;
 }
+
 .navbar-menu{
   width: 17%;
   height: 90%;
@@ -24,12 +26,14 @@
   align-items: center;
   justify-content: space-around;
 }
+
 .content{
   width: 80%;
     height: 90%;
   background: #fff;
   border-radius: 15px;
 }
+
 .img_acc{
   border-radius: 20px;
   border: 4px solid white;

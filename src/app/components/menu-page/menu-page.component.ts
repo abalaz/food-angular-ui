@@ -7,10 +7,7 @@ import { UserService } from 'src/app/services/user.service';
   styleUrls: ['./menu-page.component.css']
 })
 export class MenuPageComponent implements OnInit {
-
-  isSearch=false;
-  isHome=false;
-  isMenu=false;
+  isCheck = 'false';
 
   constructor(private userService: UserService) {
     this.userService.navigate('menu');
@@ -19,7 +16,7 @@ export class MenuPageComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  search(){
-    this.isSearch=true;
+  checkChose(): void{
+    this.isCheck = 'true';
   }
 }

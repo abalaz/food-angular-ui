@@ -18,8 +18,8 @@
           <p class="p-text">Menu</p>
         </button>
       </div>
-      <div class="btn bnt-aricles" (click)="navigateUrl('article')">
-        <button class=" inf-btn" [ngClass]="userService.isSelectedRoute === 'article' ? 'actived' : ''">
+      <div class="btn bnt-aricles" (click)="navigateUrl('articles')">
+        <button class=" inf-btn" [ngClass]="userService.isSelectedRoute === 'articles' ? 'actived' : ''">
           <span class="bootrap-navbar fas fa-file"></span>
          <p class="p-text">Articles</p>
         </button>
@@ -84,7 +84,7 @@
           </div>
           <div class="articles">
             <h1 class="srticles">Articles</h1>
-            <span class="fa fa-angle-right"></span>
+            <span class="fa fa-angle-right" (click)="navigate('articles')"></span>
           </div>
           <div class="comment">
             <div class="list-comment">

@@ -12,7 +12,7 @@ export class AppComponent implements OnInit {
   title = 'eatleand';
   isSearch=false;
   isSelectedRoute = this.userService.isSelectedRoute;
-  childData: any;
+
 
   constructor(private router:Router, public userService: UserService){
   }
@@ -33,12 +33,13 @@ export class AppComponent implements OnInit {
     this.router.navigate([direction]);
   }
 
-  displayChildValue(event: any){
-    this.childData = event;
-  }
-
   addNewItem(value: string) {
     this.direction.emit(value);
     console.log(value);
+  }
+
+  navigate(directionMenu: string){
+    this.userService.navigate(directionMenu);
+    this.router.navigate([directionMenu]);
   }
 }

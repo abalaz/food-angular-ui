@@ -49,7 +49,7 @@ export class LogningPageComponent implements OnInit {
 
   login(){
     this.router.navigate(['home']) ;
-    localStorage.setItem('isLoginIn', 'true');
+    localStorage.setItem('isLoginIn', 'false');
   }
 
 }
