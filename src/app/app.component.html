@@ -25,9 +25,9 @@
         </button>
       </div>
       <div class="btn bnt-setting">
-        <button class="inf-btn" [ngClass]="userService.isSelectedRoute === 'setting' ? 'actived' : ''" (click)="navigateUrl('setting')">
-          <span class="bootrap-navbar fa fa-gear"></span>
-          <p class="p-text">Setting</p>
+        <button class="inf-btn" [ngClass]="userService.isSelectedRoute === 'setting' ? 'actived' : ''" (click)="logout('setting')">
+          <span class="bootrap-navbar fa fa-power-off"></span>
+          <p class="p-text">Logout</p>
         </button>
       </div>
       <div class="bottom_navbar">

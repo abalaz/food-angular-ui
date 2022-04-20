@@ -1,30 +1,30 @@
-<div class="wrapper" [formGroup]="detailForm">
+<div class="wrapper" >
     <div class="content">
       <div class="left">
         <img class="img-bg" src="../../../assets/bg.png" alt="">
       </div>
       <div class="right">
-        <div class="header">
-          <h1>Welcom to Eatland</h1>
-        </div>
-        <div class="unline-header">
-          <p>Register your account</p>
-        </div>
-        <div class="list-login">
-          <div class="login-name box">
-            <p class="login-title">Name</p>
-            <input class="input" formControlName="name" placeholder="nguyen van a" type="text">
+        <form (submit)="loginUser($event)">
+          <div class="header">
+            <h1>Welcom to Eatland</h1>
           </div>
-          <div class="login-email box">
-           <p class="login-title">Email</p>
-            <input class="input" formControlName="Email" placeholder="huysadj@gmail.com" type="text">
+          <div class="unline-header">
+            <p>Register your account</p>
           </div>
-          <div class="login-Password box">
-            <p class="login-title">Password</p>
-            <input class="input" formControlName="pass" placeholder="8+ characters" type="password">
+          <div class="list-login">
+            <div class="login-email box">
+             <p class="login-title">Email</p>
+              <input class="input" name="id" placeholder="huysadj@gmail.com" type="text">
+            </div>
+            <div class="login-Password box">
+              <p class="login-title">Password</p>
+              <input class="input" name="pass" placeholder="8+ characters" type="password">
+            </div>
           </div>
-        </div>
-        <div class="btn-login"><button class="btn_button" (click)="login()">Login</button></div>
+          <div class="btn-login">
+            <button class="btn_button" type="submit">Login</button>
+          </div>
+        </form>
       </div>
     </div>
 </div>

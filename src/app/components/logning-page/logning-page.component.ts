@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormControl, FormGroup } from '@angular/forms';
+import { UserService } from 'src/app/services/user.service';
+
 interface inf4 {
   id: number;
   name: string;
@@ -42,14 +44,41 @@ export class LogningPageComponent implements OnInit {
   });
 
 
-  constructor(private router:Router){}
+  constructor(private router:Router, public userService: UserService){}
 
   ngOnInit(): void {
   }
 
-  login(){
-    this.router.navigate(['home']) ;
-    localStorage.setItem('isLoginIn', 'false');
+  loginUser(e:any): void{
+    e.preventDefault();
+    let fUser = e.target.id.value;
+    let fPass = e.target.pass.value;
+    console.log(fUser,fPass);
+
+    // this.Users.forEach(elm =>{
+    //   if(fUser == elm.gmail && fPass == elm.pass){
+
+    //     alert("Đăng Nhập Thành Công !");
+
+    //     this.router.navigate(['home']);
+    //     localStorage.setItem('isLoginIn', 'false');
+
+
+    //   }else{
+    //     alert("Đăng Nhập Thất bại !");
+    //     this.userService.setLoggedIn(false);
+    //   }
+    // })
+    const isExistUser = this.Users.find(item => item.gmail === fUser && item.pass === fPass);
+    if (isExistUser) {
+      alert("Đăng Nhập Thành Công !");
+      this.router.navigate(['home']);
+      localStorage.setItem('isLoginIn', 'false');
+    } else {
+      alert("Đăng Nhập Thất bại !");
+      this.userService.setLoggedIn(false);
+    }
+
   }
 
 }

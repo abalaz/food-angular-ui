@@ -42,4 +42,10 @@ export class AppComponent implements OnInit {
     this.userService.navigate(directionMenu);
     this.router.navigate([directionMenu]);
   }
+  logout(direction: string):void{
+    this.userService.navigate(direction);
+    this.router.navigate([direction]);
+    this.router.navigate(['']) ;
+    localStorage.clear();
+  }
 }
