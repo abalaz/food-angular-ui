@@ -87,9 +87,21 @@
 }
 .name-item {
   transform: translate(20px, -77px);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 120px;
+  overflow: hidden;
+  font-weight: 800;
+  font-size: large;
+
 }
 .objects {
   transform: translate(20px, -76px);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 100px;
+  overflow: hidden;
+  font-size: smaller;
 }
 .money {
   transform: translate(21px, -93px);
@@ -104,4 +116,24 @@
   font-size: 17px;
   font-weight: 700;
 }
+.fa-plus {
+  width: 20%;
+  height: 20px;
+  background: #30334f;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
 
+.fa-check {
+  width: 20%;
+  height: 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #30334f;
+  border: 2px solid #30334f;
+}

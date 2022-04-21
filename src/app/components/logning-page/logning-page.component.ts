@@ -55,20 +55,6 @@ export class LogningPageComponent implements OnInit {
     let fPass = e.target.pass.value;
     console.log(fUser,fPass);
 
-    // this.Users.forEach(elm =>{
-    //   if(fUser == elm.gmail && fPass == elm.pass){
-
-    //     alert("Đăng Nhập Thành Công !");
-
-    //     this.router.navigate(['home']);
-    //     localStorage.setItem('isLoginIn', 'false');
-
-
-    //   }else{
-    //     alert("Đăng Nhập Thất bại !");
-    //     this.userService.setLoggedIn(false);
-    //   }
-    // })
     const isExistUser = this.Users.find(item => item.gmail === fUser && item.pass === fPass);
     if (isExistUser) {
       alert("Đăng Nhập Thành Công !");
@@ -80,5 +66,6 @@ export class LogningPageComponent implements OnInit {
     }
 
   }
+
 
 }

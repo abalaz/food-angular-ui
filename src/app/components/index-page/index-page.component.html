@@ -8,71 +8,17 @@
             <span class="fa fa-angle-right chang-menu" (click)="navigate('menu')" ></span>
             </div>
           </div>
-          <div class="items" >
-            <div class="items-food">
-              <img class="picture" src="../../../assets/download-removebg-preview.png" alt="">
-              <div class="name-item">burger</div>
-              <p class="objects">object</p>
+          <div class="items">
+            <div class="items-food" *ngFor="let list of listData" [ngClass]="list.bestsaler? 'show':'hidden'">
+              <img class="picture"  src="../../../assets/{{list.img}}" alt="">
+              <div class="name-item">{{list.name}}</div>
+              <p class="objects">{{list.des}}</p>
               <div class="money">
                 <h5 class="test-money">
-                  $20
+                  ${{list.price}}
                 </h5>
-                <span class="fa fa-plus icon-custom"></span>
-              </div>
-            </div>
-            <div class="items-food">
-              <img class="picture"  src="../../../assets/download-removebg-preview.png" alt="">
-              <div class="name-item">burger</div>
-              <p class="objects">object</p>
-              <div class="money">
-                <h5 class="test-money">
-                  $20
-                </h5>
-                <span class="fa fa-plus icon-custom"></span>
-              </div>
-            </div>
-            <div class="items-food">
-              <img class="picture" src="../../../assets/download-removebg-preview.png" alt="">
-              <div class="name-item">burger</div>
-              <p class="objects">object</p>
-              <div class="money">
-                <h5 class="test-money">
-                  $20
-                </h5>
-                <span class="fa fa-plus icon-custom"></span>
-              </div>
-            </div>
-            <div class="items-food">
-              <img class="picture" src="../../../assets/download-removebg-preview.png" alt="">
-              <div class="name-item">burger</div>
-              <p class="objects">object</p>
-              <div class="money">
-                <h5 class="test-money">
-                  $20
-                </h5>
-                <span class="fa fa-plus icon-custom"></span>
-              </div>
-            </div>
-            <div class="items-food">
-              <img class="picture" src="../../../assets/download-removebg-preview.png" alt="">
-              <div class="name-item">burger</div>
-              <p class="objects">object</p>
-              <div class="money">
-                <h5 class="test-money">
-                  $20
-                </h5>
-                <span class="fa fa-plus icon-custom"></span>
-              </div>
-            </div>
-            <div class="items-food">
-              <img class="picture" src="../../../assets/download-removebg-preview.png" alt="">
-              <div class="name-item">burger</div>
-              <p class="objects">object</p>
-              <div class="money">
-                <h5 class="test-money">
-                  $20
-                </h5>
-                <span class="fa fa-plus icon-custom"></span>
+                <span *ngIf="!list.check" class="fa fa-plus icon-custom" (click)="unLike(list)"></span>
+                <span *ngIf="list.check" class="fa fa-check icon-custom" (click)="like(list)"></span>
               </div>
             </div>
           </div>

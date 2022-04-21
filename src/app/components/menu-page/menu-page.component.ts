@@ -7,8 +7,7 @@ import { UserService } from 'src/app/services/user.service';
   styleUrls: ['./menu-page.component.css']
 })
 export class MenuPageComponent implements OnInit {
-  isCheck = 'false';
-
+  listData = [...this.userService.listFoods] || [];
   constructor(private userService: UserService) {
     this.userService.navigate('menu');
   }
@@ -16,7 +15,20 @@ export class MenuPageComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  checkChose(): void{
-    this.isCheck = 'true';
+  unLike(i: any): void {
+    this.listData.forEach(elm =>{
+      if(elm.id === i.id){
+        elm.check= true;
+      }
+    })
   }
+
+  like(i: any): void {
+    this.listData.forEach(elm =>{
+      if(elm.id === i.id){
+        elm.check= false;
+      }
+    })
+  }
+
 }
