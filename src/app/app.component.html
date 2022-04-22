@@ -7,18 +7,18 @@
       <h3>Jack Gibbs</h3>
       </div>
       <div class="btn bnt-home">
-        <button class="inf-btn" [ngClass]="userService.isSelectedRoute === 'home' ? 'actived' : ''" (click)="navigateUrl('home')" >
+        <button class="inf-btn" [ngClass]="userService.isSelectedRoute === 'home' ? 'actived' : ''" (click)="navigate('home')" >
           <span class="bootrap-navbar fas fa-home"></span>
           <p class="p-text">Home</p>
         </button>
       </div>
       <div class="btn bnt-menu">
-        <button class="inf-btn" [ngClass]="userService.isSelectedRoute === 'menu' ? 'actived' : ''" (click)="navigateUrl('menu')">
+        <button class="inf-btn" [ngClass]="userService.isSelectedRoute === 'menu' ? 'actived' : ''" (click)="navigate('menu')">
           <span class="bootrap-navbar fas fa-book"></span>
           <p class="p-text">Menu</p>
         </button>
       </div>
-      <div class="btn bnt-aricles" (click)="navigateUrl('articles')">
+      <div class="btn bnt-aricles" (click)="navigate('articles')">
         <button class=" inf-btn" [ngClass]="userService.isSelectedRoute === 'articles' ? 'actived' : ''">
           <span class="bootrap-navbar fas fa-file"></span>
          <p class="p-text">Articles</p>
@@ -49,27 +49,27 @@
       <div class="bottomc-content">
         <div class="content-left">
           <div class="lists-menu">
-            <div class="list-name">
+            <div class="list-name" [ngClass]="selectedFoodType === 'all'? 'actived' :''" (click)="navigateUrl('menu', 'all')">
               <img class="img-list-name" src="../assets/images__3_-removebg-preview.png" alt="">
               <p>All</p>
             </div>
-            <div class="list-name">
+            <div class="list-name" [ngClass]="selectedFoodType === 'burger'? 'actived' :''"  (click)="navigateUrl('menu', 'burger')">
               <img class="img-list-name" src="../../../assets/download-removebg-preview.png" alt="">
               <p>Bugers</p>
             </div>
-            <div class="list-name">
+            <div class="list-name" [ngClass]="selectedFoodType === 'pizza'? 'actived' :''" (click)="navigateUrl('menu', 'pizza')">
               <img class="img-list-name" src="../assets/pizza-y-removebg-preview.png" alt="">
               <p>Pizza</p>
             </div>
-            <div class="list-name">
+            <div class="list-name" [ngClass]="selectedFoodType === 'salads'? 'actived' :''" (click)="navigateUrl('menu', 'salads')">
               <img class="img-list-name" src="../assets/images-removebg-preview (1).png" alt="">
               <p>Salads</p>
             </div>
-            <div class="list-name">
+            <div class="list-name" [ngClass]="selectedFoodType === 'deserts'? 'actived' :''"  (click)="navigateUrl('menu', 'deserts')">
               <img class="img-list-name" src="../assets/images__2_-removebg-preview.png" alt="">
               <p>Deserts</p>
             </div>
-            <div class="list-name">
+            <div class="list-name" [ngClass]="selectedFoodType === 'drinks'? 'actived' :''" (click)="navigateUrl('menu', 'drinks')">
               <img class="img-list-name" src="../assets/images__1_-removebg-preview.png" alt="">
               <p>Drinks</p>
             </div>

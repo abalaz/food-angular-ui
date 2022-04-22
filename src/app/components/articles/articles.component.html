@@ -2,164 +2,24 @@
 <div class="listNews">
 
   <div class="left-news">
-    <div class="news">
+    <div class="news" *ngFor="let list of listDataRight">
       <div class="imge-news">
-        <img class="imge" src="../../../assets/download (1).jfif" alt="">
+        <img class="imge" src="../../../assets/{{list.img}}" alt="">
       </div>
       <div class="content-news">
-        <h4 class="test">It's best saler</h4>
-        <p class="test-inline">today I go to school......</p>
-      </div>
-    </div>
-
-    <div class="news">
-      <div class="imge-news">
-        <img class="imge" src="../../../assets/download (1).jfif" alt="">
-      </div>
-      <div class="content-news">
-        <h4 class="test">It's best saler</h4>
-        <p class="test-inline">today I go to school......</p>
-      </div>
-    </div>
-
-    <div class="news">
-      <div class="imge-news">
-        <img class="imge" src="../../../assets/download (1).jfif" alt="">
-      </div>
-      <div class="content-news">
-        <h4 class="test">It's best saler</h4>
-        <p class="test-inline">today I go to school......</p>
-      </div>
-    </div>
-
-    <div class="news">
-      <div class="imge-news">
-        <img class="imge" src="../../../assets/download (1).jfif" alt="">
-      </div>
-      <div class="content-news">
-        <h4 class="test">It's best saler</h4>
-        <p class="test-inline">today I go to school......</p>
-      </div>
-    </div>
-
-    <div class="news">
-      <div class="imge-news">
-        <img class="imge" src="../../../assets/download (1).jfif" alt="">
-      </div>
-      <div class="content-news">
-        <h4 class="test">It's best saler</h4>
-        <p class="test-inline">today I go to school......</p>
-      </div>
-    </div>
-
-    <div class="news">
-      <div class="imge-news">
-        <img class="imge" src="../../../assets/download (1).jfif" alt="">
-      </div>
-      <div class="content-news">
-        <h4 class="test">It's best saler</h4>
-        <p class="test-inline">today I go to school......</p>
-      </div>
-    </div>
-
-    <div class="news">
-      <div class="imge-news">
-        <img class="imge" src="../../../assets/download (1).jfif" alt="">
-      </div>
-      <div class="content-news">
-        <h4 class="test">It's best saler</h4>
-        <p class="test-inline">today I go to school......</p>
-      </div>
-    </div>
-
-    <div class="news">
-      <div class="imge-news">
-        <img class="imge" src="../../../assets/download (1).jfif" alt="">
-      </div>
-      <div class="content-news">
-        <h4 class="test">It's best saler</h4>
-        <p class="test-inline">today I go to school......</p>
+        <h4 class="test">{{list.name}}</h4>
+        <p class="test-inline">{{list.des}}</p>
       </div>
     </div>
   </div>
   <div class="right-news">
-    <div class="news">
+    <div class="news" *ngFor=" let listleft of listDataLeft">
       <div class="imge-news">
-        <img class="imge" src="../../../assets/download (1).jfif" alt="">
+        <img class="imge" src="../../../assets/{{listleft.img}}" alt="">
       </div>
       <div class="content-news">
-        <h4 class="test">It's best saler</h4>
-        <p class="test-inline">today I go to school......</p>
-      </div>
-    </div>
-
-    <div class="news">
-      <div class="imge-news">
-        <img class="imge" src="../../../assets/download (1).jfif" alt="">
-      </div>
-      <div class="content-news">
-        <h4 class="test">It's best saler</h4>
-        <p class="test-inline">today I go to school......</p>
-      </div>
-    </div>
-
-    <div class="news">
-      <div class="imge-news">
-        <img class="imge" src="../../../assets/download (1).jfif" alt="">
-      </div>
-      <div class="content-news">
-        <h4 class="test">It's best saler</h4>
-        <p class="test-inline">today I go to school......</p>
-      </div>
-    </div>
-
-    <div class="news">
-      <div class="imge-news">
-        <img class="imge" src="../../../assets/download (1).jfif" alt="">
-      </div>
-      <div class="content-news">
-        <h4 class="test">It's best saler</h4>
-        <p class="test-inline">today I go to school......</p>
-      </div>
-    </div>
-
-    <div class="news">
-      <div class="imge-news">
-        <img class="imge" src="../../../assets/download (1).jfif" alt="">
-      </div>
-      <div class="content-news">
-        <h4 class="test">It's best saler</h4>
-        <p class="test-inline">today I go to school......</p>
-      </div>
-    </div>
-
-    <div class="news">
-      <div class="imge-news">
-        <img class="imge" src="../../../assets/download (1).jfif" alt="">
-      </div>
-      <div class="content-news">
-        <h4 class="test">It's best saler</h4>
-        <p class="test-inline">today I go to school......</p>
-      </div>
-    </div>
-
-    <div class="news">
-      <div class="imge-news">
-        <img class="imge" src="../../../assets/download (1).jfif" alt="">
-      </div>
-      <div class="content-news">
-        <h4 class="test">It's best saler</h4>
-        <p class="test-inline">today I go to school......</p>
-      </div>
-    </div>
-
-    <div class="news">
-      <div class="imge-news">
-        <img class="imge" src="../../../assets/download (1).jfif" alt="">
-      </div>
-      <div class="content-news">
-        <h4 class="test">It's best saler</h4>
-        <p class="test-inline">today I go to school......</p>
+        <h4 class="test">{{listleft.name}}</h4>
+        <p class="test-inline">{{listleft.des}}</p>
       </div>
     </div>
   </div>

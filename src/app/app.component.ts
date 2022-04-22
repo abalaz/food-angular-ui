@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Output,EventEmitter } from '@angular/core';
 import { UserService } from './services/user.service';
 @Component({
@@ -12,12 +12,18 @@ export class AppComponent implements OnInit {
   title = 'eatleand';
   isSearch=false;
   isSelectedRoute = this.userService.isSelectedRoute;
+  isChosse = false;
+  selectedFoodType = 'all';
 
-
-  constructor(private router:Router, public userService: UserService){
+  constructor(private router:Router, public userService: UserService,private route: ActivatedRoute ){
   }
 
   ngOnInit(): void {
+    this.route.queryParams
+      .subscribe(params => {
+        this.selectedFoodType = params['categori'];
+        console.log(this.selectedFoodType); // { order: "popular" }
+      })
   }
 
   get islogin() {
@@ -28,9 +34,10 @@ export class AppComponent implements OnInit {
     this.isSearch=true;
   }
 
-  navigateUrl(direction: string) {
-    this.userService.navigate(direction);
-    this.router.navigate([direction]);
+  navigateUrl(direction: string, type: string) {
+    this.router.navigate([direction], { queryParams: { categori: type }});
+    this.selectedFoodType = type;
+
   }
 
   addNewItem(value: string) {
@@ -42,6 +49,7 @@ export class AppComponent implements OnInit {
     this.userService.navigate(directionMenu);
     this.router.navigate([directionMenu]);
   }
+
   logout(direction: string):void{
     this.userService.navigate(direction);
     this.router.navigate([direction]);

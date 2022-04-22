@@ -137,3 +137,11 @@
   color: #30334f;
   border: 2px solid #30334f;
 }
+
+.hidden {
+  display: none;
+}
+
+.show {
+  display: block;
+}

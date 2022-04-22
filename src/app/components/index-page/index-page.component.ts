@@ -14,7 +14,7 @@ export class IndexPageComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.listData = this.listData.splice(0, 6);
+
     console.log(this.listData);
   }
 
@@ -22,6 +22,7 @@ export class IndexPageComponent implements OnInit {
     this.userService.navigate(directionMenu);
     this.router.navigate([directionMenu]);
   }
+
   unLike(i: any): void {
     this.listData.forEach(elm =>{
       if(elm.id === i.id){
@@ -29,6 +30,7 @@ export class IndexPageComponent implements OnInit {
       }
     })
   }
+
   like(i: any): void {
     this.listData.forEach(elm =>{
       if(elm.id === i.id){

@@ -288,7 +288,7 @@ input {
   font-size: small;
   flex-direction: column;
 }
-.list-name:hover {
+.list-name.actived {
   background-color: #fafafaed ;
 }
 
