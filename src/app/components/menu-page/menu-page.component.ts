@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, OnChanges, SimpleChanges,AfterContentChecked,DoCheck } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { UserService } from 'src/app/services/user.service';
 @Component({
@@ -7,31 +7,32 @@ import { UserService } from 'src/app/services/user.service';
   styleUrls: ['./menu-page.component.css']
 })
 export class MenuPageComponent implements OnInit {
+  foodType = false;
   listData = [...this.userService.listFoods] || [];
   selectedFoodType = 'all';
-  foodType= false;
+
 
   constructor(private userService: UserService, private route: ActivatedRoute) {
     this.userService.navigate('menu');
     this.route.queryParams.subscribe(url => {
-      this.selectedFoodType = url['categori'];
-      console.log(this.selectedFoodType)
-      this.findFood();
+      this.selectedFoodType = url['categori'] || 'all';
+      this.getListFood(this.selectedFoodType);
+      // console.log(this.selectedFoodType)
     });
   }
 
-  ngOnInit(): void {
-
+  getListFood(type: string) {
+    console.log('type', type);
+    if (type === 'all') {
+      this.listData = [...this.userService.listFoods] || [];
+    } else {
+      this.listData = [...this.userService.listFoods.filter(i => i.categori === type)];
+    }
   }
 
-  findFood() {
-  this.listData.find(elm => {
-    if(elm.categori === this.selectedFoodType)
-    {
-      this.foodType= true;
-      console.log("true")
-    }
-  })
+
+  ngOnInit(): void {
+
   }
 
   unLike(i: any): void {
@@ -49,7 +50,4 @@ export class MenuPageComponent implements OnInit {
       }
     })
   }
-
-
-
 }

@@ -48,6 +48,13 @@ export class AppComponent implements OnInit {
   navigate(directionMenu: string){
     this.userService.navigate(directionMenu);
     this.router.navigate([directionMenu]);
+    if(directionMenu==='menu'){
+      this.selectedFoodType='all';
+
+    }
+    else{
+      this.selectedFoodType='';
+    }
   }
 
   logout(direction: string):void{
