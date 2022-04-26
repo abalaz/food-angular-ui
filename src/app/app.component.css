@@ -226,6 +226,25 @@
   border-radius: 15px;
 }
 
+.number-item-in-cart{
+  position: absolute;
+  padding: 6px 5px;
+  font-size: 14px;
+  line-height: 5px;
+  right: 170px;
+  top: 135px;
+  background-color: #f2577d;
+  border-radius: 9px;
+  color: white;
+  font-weight: 600;
+}
+
+.cart-list--no-cart{
+  position: absolute;
+  top:100%;
+  right: 20px;
+}
+
 input {
   width: 100px;
   height: 50px;

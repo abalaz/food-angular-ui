@@ -10,7 +10,7 @@ export class UserService {
   listFoods = [
     {
       id: 1,
-      img: "download-removebg-preview.png",
+      img: "img-burger/pixlr-bg-result.png",
       name: "Burger Beef",
       des: "Lorem Ipsum is simply dummy text of the printing ",
       price: "5",
@@ -21,12 +21,12 @@ export class UserService {
     },
     {
       id: 2,
-      img: "download-removebg-preview.png",
+      img: "img-burger/pixlr-bg-result (1).png",
       name: "Burger Chicken",
       des: "Lorem Ipsum is simply dummy text of the printing ",
       price: "12",
       categori: "burger",
-      check:false,
+      check:true,
       bestsaler:false,
 
     },
@@ -37,12 +37,12 @@ export class UserService {
       des: "Lorem Ipsum is simply dummy text of the printing ",
       price: "25",
       categori: "burger",
-      check:false,
+      check:true,
       bestsaler:false,
     },
     {
       id: 4,
-      img: "download-removebg-preview.png",
+      img: "img-burger/pixlr-bg-result (1).png",
       name: "Burger Seafood",
       des: "Lorem Ipsum is simply dummy text of the printing ",
       price: "20",
@@ -52,7 +52,7 @@ export class UserService {
     },
     {
       id: 5,
-      img: "download-removebg-preview.png",
+      img: "img-pizza/pixlr-bg-result (1).png",
       name: "Pizza",
       des: "Lorem Ipsum is simply dummy text of the printing ",
       price: "10",
@@ -62,7 +62,7 @@ export class UserService {
     },
     {
       id: 6,
-      img: "download-removebg-preview.png",
+      img: "img-pizza/pixlr-bg-result.png",
       name: "Pizza pork",
       des: "Lorem Ipsum is simply dummy text of the printing ",
       price: "35",
@@ -72,7 +72,7 @@ export class UserService {
     },
     {
       id: 7,
-      img: "download-removebg-preview.png",
+      img: "img-pizza/pixlr-bg-result (2).png",
       name: "Pizza Chicken",
       des: "Lorem Ipsum is simply dummy text of the printing ",
       price: "40",
@@ -82,7 +82,7 @@ export class UserService {
     },
     {
       id: 8,
-      img: "download-removebg-preview.png",
+      img: "img-pizza/pixlr-bg-result (3).png",
       name: "Pizza chesse",
       des: "Lorem Ipsum is simply dummy text of the printing ",
       price: "35",
@@ -93,8 +93,8 @@ export class UserService {
     },
     {
       id: 9,
-      img: "download-removebg-preview.png",
-      name: "Salad with egg",
+      img: "img-salad/pixlr-bg-result (1).png",
+      name: "Salad with eggs",
       des: "Lorem Ipsum is simply dummy text of the printing ",
       price: "10",
       categori: "salads",
@@ -104,7 +104,7 @@ export class UserService {
     },
     {
       id: 10,
-      img: "download-removebg-preview.png",
+      img: "img-salad/pixlr-bg-result.png",
       name: "Salad vegetable",
       des: "Lorem Ipsum is simply dummy text of the printing ",
       price: "6",
@@ -115,7 +115,7 @@ export class UserService {
     {
       id: 11,
       img: "download-removebg-preview.png",
-      name: "Salad with fruit",
+      name: "Salad fruit",
       des: "Lorem Ipsum is simply dummy text of the printing ",
       price: "20",
       categori: "salads",
@@ -124,7 +124,7 @@ export class UserService {
     },
     {
       id: 12,
-      img: "download-removebg-preview.png",
+      img: "img-dessert/pixlr-bg-result.png",
       name: "Souffle",
       des: "Lorem Ipsum is simply dummy text of the printing ",
       price: "20",
@@ -134,7 +134,7 @@ export class UserService {
     },
     {
       id: 13,
-      img: "download-removebg-preview.png",
+      img: "img-dessert/pixlr-bg-result (1).png",
       name: "Cupcake",
       des: "Lorem Ipsum is simply dummy text of the printing ",
       price: "30",
@@ -144,17 +144,17 @@ export class UserService {
     },
     {
       id: 14,
-      img: "download-removebg-preview.png",
+      img: "img-dessert/pixlr-bg-result (2).png",
       name: "Chocolate mousse",
       des: "Lorem Ipsum is simply dummy text of the printing ",
       price: "25",
-      categori: "desserts",
+      categori: "deserts",
       check:false,
       bestsaler:false,
     },
     {
       id: 15,
-      img: "download-removebg-preview.png",
+      img: "img-drink/pixlr-bg-result (3).png",
       name: "Cocacola",
       des: "Lorem Ipsum is simply dummy text of the printing ",
       price: "3",
@@ -164,17 +164,17 @@ export class UserService {
     },
     {
       id: 16,
-      img: "download-removebg-preview.png",
+      img: "img-drink/pixlr-bg-result (2).png",
       name: "Pepsi",
       des: "Lorem Ipsum is simply dummy text of the printing ",
       price: "3",
-      categori: "deserts",
+      categori: "drinks",
       check:false,
       bestsaler:false,
     },
     {
       id: 17,
-      img: "download-removebg-preview.png",
+      img: "img-drink/pixlr-bg-result (1).png",
       name: "7Up",
       des: "Lorem Ipsum is simply dummy text of the printing ",
       price: "3",
@@ -184,7 +184,7 @@ export class UserService {
     },
     {
       id: 18,
-      img: "download-removebg-preview.png",
+      img: "img-drink/pixlr-bg-result.png",
       name: "Water",
       des: "Lorem Ipsum is simply dummy text of the printing ",
       price: "25",

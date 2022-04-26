@@ -14,9 +14,13 @@ export class AppComponent implements OnInit {
   isSelectedRoute = this.userService.isSelectedRoute;
   isChosse = false;
   selectedFoodType = 'all';
+  listData =[...this.userService.listFoods];
+  items= 0;
 
   constructor(private router:Router, public userService: UserService,private route: ActivatedRoute ){
+    this.countNumber();
   }
+
 
   ngOnInit(): void {
     this.route.queryParams
@@ -62,5 +66,15 @@ export class AppComponent implements OnInit {
     this.router.navigate([direction]);
     this.router.navigate(['']) ;
     localStorage.clear();
+  }
+
+  countNumber(){
+    this.listData.find(elm=> {
+      if(elm.check=== true){
+        length++;
+        this.items= length;
+        console.log(this.items);
+      }
+    });
   }
 }

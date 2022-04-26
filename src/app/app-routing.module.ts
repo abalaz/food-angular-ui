@@ -5,12 +5,14 @@ import { IndexPageComponent } from './components/index-page/index-page.component
 import { LogningPageComponent } from './components/logning-page/logning-page.component';
 import { MenuPageComponent } from './components/menu-page/menu-page.component';
 import { LogoutPageComponent } from './components/logout-page/logout-page.component';
+import { CartComponent } from './components/cart/cart.component';
 const routes: Routes = [
   {path: '', component: LogningPageComponent },
   {path: 'home', component: IndexPageComponent} ,
   {path: 'menu', component: MenuPageComponent },
   {path:'articles', component: ArticlesComponent},
-  {path:'setting', component: LogoutPageComponent }
+  {path:'setting', component: LogoutPageComponent },
+  {path:'cart', component: CartComponent}
 ];
 
 @NgModule({

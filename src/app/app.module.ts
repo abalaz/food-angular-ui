@@ -9,6 +9,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { MenuPageComponent } from './components/menu-page/menu-page.component';
 import { ArticlesComponent } from './components/articles/articles.component';
 import { LogoutPageComponent } from './components/logout-page/logout-page.component';
+import { CartComponent } from './components/cart/cart.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +17,8 @@ import { LogoutPageComponent } from './components/logout-page/logout-page.compon
     IndexPageComponent,
     MenuPageComponent,
     ArticlesComponent,
-    LogoutPageComponent
+    LogoutPageComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,

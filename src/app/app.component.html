@@ -44,7 +44,10 @@
           </button>
 
         </div>
-        <div class="store"><button class="fa fa-shopping-cart"></button></div>
+        <div class="store">
+          <button class="fa fa-shopping-cart" (click)="navigate('cart')"></button>
+          <span class="number-item-in-cart">{{this.items}}</span>
+        </div>
       </div>
       <div class="bottomc-content">
         <div class="content-left">

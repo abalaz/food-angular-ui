@@ -73,11 +73,11 @@
 }
 .picture{
   width: 100px;
-  height: 120px;
-  transform: translate(10px, -61px);
+  height: 96px;
+  transform: translate(25px, -52px);
 }
 .name-item {
-  transform: translate(20px, -77px);
+  transform: translate(20px, -56px);
   white-space: nowrap;
   text-overflow: ellipsis;
   width: 120px;
@@ -87,7 +87,7 @@
 
 }
 .objects {
-  transform: translate(20px, -76px);
+  transform: translate(20px, -57px);
   white-space: nowrap;
   text-overflow: ellipsis;
   width: 100px;
@@ -95,7 +95,7 @@
   font-size: smaller;
 }
 .money {
-  transform: translate(21px, -93px);
+  transform: translate(21px, -70px);
   display: flex;
   justify-content: space-between;
   align-items: stretch;
