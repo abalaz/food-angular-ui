@@ -7,7 +7,6 @@ import { UserService } from 'src/app/services/user.service';
   styleUrls: ['./menu-page.component.css']
 })
 export class MenuPageComponent implements OnInit {
-  foodType = false;
   listData = [...this.userService.listFoods] || [];
   selectedFoodType = 'all';
 

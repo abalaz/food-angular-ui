@@ -8,8 +8,7 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class IndexPageComponent implements OnInit {
   listData = [...this.userService.listFoods] || [];
-  constructor(
-    private router:Router, public userService: UserService) {
+  constructor(    private router:Router, public userService: UserService) {
     }
 
 

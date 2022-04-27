@@ -7,6 +7,7 @@ import { UserService } from 'src/app/services/user.service';
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent implements OnInit {
+  listData = [...this.userService.listFoods]||[];
 
   constructor(private userService: UserService) {
 
