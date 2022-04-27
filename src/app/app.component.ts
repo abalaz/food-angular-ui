@@ -14,11 +14,11 @@ export class AppComponent implements OnInit {
   isSelectedRoute = this.userService.isSelectedRoute;
   isChosse = false;
   selectedFoodType = 'all';
-  listData =[...this.userService.listFoods] ||[];
+  listData =[...this.userService.listFoods] || [];
   items= 0;
 
   constructor(private router:Router, public userService: UserService,private route: ActivatedRoute ){
-    this.countNumber();
+    // this.countNumber();
   }
 
 
@@ -69,7 +69,7 @@ export class AppComponent implements OnInit {
   }
 
   countNumber(){
-    this.listData.find(elm=> {
+    this.listData.forEach(elm=> {
       if(elm.check=== true){
         length++;
         this.items= length;
