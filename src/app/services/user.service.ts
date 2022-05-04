@@ -7,7 +7,7 @@ export class UserService {
   isSelectedRoute = 'home';
   selectedFoodType= 'all';
   private loggedInStatus = JSON.parse(localStorage.getItem('loggedIn') || 'false');
-  listFoods = [
+  listFoodsOriginal = [
     {
       id: 1,
       img: "img-burger/pixlr-bg-result.png",
@@ -193,6 +193,7 @@ export class UserService {
       bestsaler:false,
     },
   ];
+  listFoods = [...this.listFoodsOriginal];
 
   articlesRight =[
     {
@@ -285,6 +286,11 @@ export class UserService {
 
   navigate(direction: string) {
     this.isSelectedRoute = direction;
+
+  }
+
+  getIdCart(idCart:number){
+
   }
 
 }

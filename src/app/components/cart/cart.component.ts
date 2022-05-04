@@ -9,21 +9,12 @@ import { UserService } from 'src/app/services/user.service';
 export class CartComponent implements OnInit {
   listData = [...this.userService.listFoods];
   items=0;
-  ketQua = 0;
 
   constructor(private userService: UserService) {
-  this.countNumber();
+
    }
 
   ngOnInit(): void {
-  }
-  countNumber(){
-    this.listData.forEach(elm=> {
-      if(elm.check=== true){
-        length++;
-        this.items = length;
-      }
-    });
   }
 
 }

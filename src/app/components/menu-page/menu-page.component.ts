@@ -20,18 +20,19 @@ export class MenuPageComponent implements OnInit {
     });
   }
 
+  ngOnInit(): void {
+
+  }
+
   getListFood(type: string) {
     console.log('type', type);
     if (type === 'all') {
       this.listData = [...this.userService.listFoods] || [];
+      this.ngOnInit();
     } else {
       this.listData = [...this.userService.listFoods.filter(i => i.categori === type)];
+      this.ngOnInit();
     }
-  }
-
-
-  ngOnInit(): void {
-
   }
 
   unLike(i: any): void {

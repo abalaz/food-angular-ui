@@ -38,8 +38,8 @@
       <div class="header-content">
         <div class="name-header"><h2 class="name">Welcome to Eatland</h2></div>
         <div class="research-header">
-          <input [ngClass]="isSearch ? 'show' : 'hidden'" type="text" class="txt-search">
-          <button class="search" (click)="search()">
+          <input #txtSearch [ngClass]="isSearch ? 'show' : 'hidden'" type="text" class="txt-search">
+          <button class="search" (click)="search(txtSearch.value)">
             <span class="fa fa-search"></span>
           </button>
 

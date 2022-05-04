@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Output,EventEmitter } from '@angular/core';
 import { UserService } from './services/user.service';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -18,7 +19,7 @@ export class AppComponent implements OnInit {
   items= 0;
 
   constructor(private router:Router, public userService: UserService,private route: ActivatedRoute ){
-    // this.countNumber();
+    this.countNumber();
   }
 
 
@@ -34,14 +35,24 @@ export class AppComponent implements OnInit {
     return localStorage.getItem('isLoginIn');
   }
 
-  search(){
+  search(value: any){
+    console.log(value);
+    // this.listData =[...this.userService.listFoods.filter(i => i.name.includes(value))];
+    this.userService.listFoods = [...this.userService.listFoods.filter(i => i.name.includes(value))];
+    console.log(this.userService.listFoods);
     this.isSearch=true;
+    if(value === ''){
+      this.userService.navigate('home');
+      this.router.navigate(['home']);
+    }else{
+      this.router.navigate(['menu']);
+    }
   }
 
   navigateUrl(direction: string, type: string) {
     this.router.navigate([direction], { queryParams: { categori: type }});
     this.selectedFoodType = type;
-
+    window.location.replace(direction);
   }
 
   addNewItem(value: string) {
@@ -54,7 +65,6 @@ export class AppComponent implements OnInit {
     this.router.navigate([directionMenu]);
     if(directionMenu==='menu'){
       this.selectedFoodType='all';
-
     }
     else{
       this.selectedFoodType='';
@@ -69,7 +79,7 @@ export class AppComponent implements OnInit {
   }
 
   countNumber(){
-    this.listData.forEach(elm=> {
+    this.userService.listFoods.find(elm=> {
       if(elm.check=== true){
         length++;
         this.items= length;
