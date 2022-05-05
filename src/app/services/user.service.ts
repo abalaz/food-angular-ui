@@ -37,7 +37,7 @@ export class UserService {
       des: "Lorem Ipsum is simply dummy text of the printing ",
       price: "25",
       categori: "burger",
-      check:true,
+      check:false,
       bestsaler:false,
     },
     {
@@ -87,7 +87,7 @@ export class UserService {
       des: "Lorem Ipsum is simply dummy text of the printing ",
       price: "35",
       categori: "pizza",
-      check:true,
+      check:false,
       bestsaler:true,
 
     },

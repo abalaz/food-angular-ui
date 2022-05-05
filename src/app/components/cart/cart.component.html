@@ -7,12 +7,15 @@
             <p class="img-item-top ">Image</p>
           </td>
           <td>
-            <p class="name-item-top">Name {{this.items}}</p>
+            <p class="name-item-top">Name </p>
           </td>
           <td>
             <p class="money-item-top">
               Price
             </p>
+          </td>
+          <td>
+
           </td>
         </tr>
         <tr class="table-content" *ngFor="let item of listData" [ngClass]="item.check? 'show':'hidden'">
@@ -24,6 +27,9 @@
           </td>
           <td>
            <p class="money-item">${{item.price}}</p>
+          </td>
+          <td>
+            <button class="delete-item" (click)="delete(item.id)">delete</button>
           </td>
         </tr>
       </tbody>

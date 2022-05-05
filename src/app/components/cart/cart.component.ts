@@ -8,7 +8,6 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class CartComponent implements OnInit {
   listData = [...this.userService.listFoods];
-  items=0;
 
   constructor(private userService: UserService) {
 
@@ -17,4 +16,8 @@ export class CartComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  delete(i: number): void{
+    this.listData = this.userService.listFoods.filter(elm => elm.id !== i);
+    this.userService.listFoods = this.listData;
+  }
 }

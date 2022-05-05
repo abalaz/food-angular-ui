@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Output,EventEmitter } from '@angular/core';
 import { UserService } from './services/user.service';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -19,7 +20,6 @@ export class AppComponent implements OnInit {
   items= 0;
 
   constructor(private router:Router, public userService: UserService,private route: ActivatedRoute ){
-    this.countNumber();
   }
 
 
@@ -52,7 +52,7 @@ export class AppComponent implements OnInit {
   navigateUrl(direction: string, type: string) {
     this.router.navigate([direction], { queryParams: { categori: type }});
     this.selectedFoodType = type;
-    window.location.replace(direction);
+
   }
 
   addNewItem(value: string) {
@@ -78,13 +78,9 @@ export class AppComponent implements OnInit {
     localStorage.clear();
   }
 
-  countNumber(){
-    this.userService.listFoods.find(elm=> {
-      if(elm.check=== true){
-        length++;
-        this.items= length;
-        console.log(this.items);
-      }
-    });
+  get countNumber(){
+    const numberListOrder = this.userService.listFoods.filter(i => i.check).length;
+    console.log(numberListOrder);
+    return numberListOrder;
   }
 }

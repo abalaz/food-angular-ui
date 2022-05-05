@@ -17,6 +17,8 @@ tbody {
   overflow-y: scroll;
   height: 375px;
   width: 519px;
+  margin: 0px 0px 10px 2px;
+  border-radius: 9px;
 }
 
 ::-webkit-scrollbar {
@@ -35,23 +37,26 @@ tbody {
 
 .table-top {
   height: 50px;
+  background-color:rgb(234 240 252);
+  border-radius: 9px 9px 0px 0px;
 }
 
 .img-item-top {
   width: 100px;
   display: flex;
   justify-content: center;
+  align-items: center;
   font-weight: 600;
-  font-size: 25px;
+  font-size: 20px;
   font-family: 'Roboto', sans-serif;
 }
 
 .name-item-top {
-  width: 280px;
+  width: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 27px;
+  font-size: 20px;
   font-weight: 600;
   font-family: 'Roboto', sans-serif;
 }
@@ -59,10 +64,9 @@ tbody {
 .money-item-top {
   display: flex;
   font-weight: 600;
-  height: 30px;
-  width: 64px;
+  justify-content: center;
   align-items: center;
-  font-size: 25px;
+  font-size: 20px;
   font-family: 'Roboto', sans-serif;
 }
 
@@ -73,18 +77,33 @@ tbody {
 .img-item {
   width: 100px;
   height: 60px;
+  transform: translateY(-8px);
 }
 
 .name-item {
-  width: 290px;
+  width: 210px;
   text-align: center;
   font-size: 20px;
   font-family: 'Roboto', sans-serif;
+  transform: translateY(10px);
 }
 
 .money-item {
   width: 50px;
   font-family: 'Roboto', sans-serif;
+  transform: translateY(10px);
+}
+
+.delete-item{
+  border: none;
+  height: 25px;
+  width: 55px;
+  border-radius: 4px;
+  background: #eaf1fd;
+}
+
+.delete-item:focus{
+  outline: none ;
 }
 
 .hidden {
